@@ -19,11 +19,12 @@
                     }
                 });
             }
-            // Initialize CMS only after DOM is fully loaded
+
+            // Ensure CMS is initialized only after the DOM is fully loaded
             if (typeof CMS !== 'undefined') {
                 CMS.init();
             } else {
-                console.error("CMS is not defined");
+                console.error("CMS is not defined. Make sure the script is correctly included.");
             }
         });
     </script>
