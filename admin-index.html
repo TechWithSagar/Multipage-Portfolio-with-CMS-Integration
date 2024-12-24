@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content Manager</title>
+    <!-- Load Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Load Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </head>
 <body>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Initialize Netlify Identity
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {
                     if (!user) {
@@ -20,6 +23,7 @@
                 });
             }
 
+            // Ensure Netlify CMS is initialized after the DOM is fully loaded
             if (typeof window.CMS !== 'undefined') {
                 window.CMS.init();
             } else {
