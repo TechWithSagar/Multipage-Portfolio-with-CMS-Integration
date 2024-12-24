@@ -27,13 +27,21 @@ collections:
         file: "education.html"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Education List", name: "education_list", widget: "list", fields: [{label: "Degree", name: "degree", widget: "string"}, {label: "Institution", name: "institution", widget: "string"}, {label: "Year", name: "year", widget: "string"}]}
+          - {label: "Education List", name: "education_list", widget: "list", fields: [
+                {label: "Degree", name: "degree", widget: "string"},
+                {label: "Institution", name: "institution", widget: "string"},
+                {label: "Year", name: "year", widget: "string"}
+            ]}
       - label: "Projects"
         name: "projects"
         file: "projects.html"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Projects", name: "projects_list", widget: "list", fields: [{label: "Project Name", name: "project_name", widget: "string"}, {label: "Description", name: "description", widget: "markdown"}, {label: "Link", name: "link", widget: "string"}]}
+          - {label: "Projects", name: "projects_list", widget: "list", fields: [
+                {label: "Project Name", name: "project_name", widget: "string"},
+                {label: "Description", name: "description", widget: "markdown"},
+                {label: "Link", name: "link", widget: "string"}
+            ]}
       - label: "Contact"
         name: "contact"
         file: "contact.html"
@@ -41,4 +49,7 @@ collections:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Message", name: "message", widget: "text"}
-          - {label: "Social Links", name: "social_links", widget: "list", fields: [{label: "Platform", name: "platform", widget: "string"}, {label: "Link", name: "link", widget: "string"}]}
+          - {label: "Social Links", name: "social_links", widget: "list", fields: [
+                {label: "Platform", name: "platform", widget: "string"},
+                {label: "Link", name: "link", widget: "string"}
+            ]}
