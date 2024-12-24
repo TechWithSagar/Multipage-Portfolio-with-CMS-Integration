@@ -24,8 +24,8 @@
             }
 
             // Ensure Netlify CMS is initialized after the DOM is fully loaded
-            if (typeof CMS !== 'undefined') {
-                CMS.init();
+            if (typeof window.CMS !== 'undefined') {
+                window.CMS.init();
             } else {
                 console.error("CMS is not defined. Make sure the script is correctly included.");
             }
