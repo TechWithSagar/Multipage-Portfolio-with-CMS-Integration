@@ -9,19 +9,22 @@
 </head>
 <body>
     <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin-index.html";
-                    });
-                }
-            });
-        }
-    </script>
-    <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            CMS.init();
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                    if (!user) {
+                        window.netlifyIdentity.on("login", () => {
+                            document.location.href = "/admin-index.html";
+                        });
+                    }
+                });
+            }
+            // Initialize CMS only after DOM is fully loaded
+            if (typeof CMS !== 'undefined') {
+                CMS.init();
+            } else {
+                console.error("CMS is not defined");
+            }
         });
     </script>
 </body>
